@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Support — SGM · Colombo Swimming Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --b9:#061E30;--b8:#0B3D5E;--b7:#0E4A6E;--b6:#155A82;
+  --b4:#2A8AB8;--b2:#A8D4E8;--b05:#EBF4FA;
+  --s4:#B4C4D0;--s3:#C8D8E4;--s2:#DDE8EF;--s1:#EEF4F7;
+  --t9:#0F1923;--t6:#3A4A58;--t4:#5A6A7A;
+  --wh:#FFFFFF;--bg:#F2F6F9;--br:#C8D8E4;--r:4px;
+  --accent:#B03A2E;--accent-l:#FBF0EF;--accent-d:#8E2D22
+}
+body{font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;color:var(--t9);background:var(--b9);min-height:100vh}
+.wrap{max-width:960px;margin:0 auto;background:var(--bg);box-shadow:0 0 80px rgba(0,0,0,.35)}
+.wave-bar{height:4px;background:linear-gradient(90deg,var(--b9),var(--b4),var(--b2),var(--b4),var(--b9))}
+.hero{background:linear-gradient(150deg,var(--b8) 0%,var(--b9) 100%);padding:2.5rem 2rem 2rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:380px;height:380px;border-radius:50%;border:1px solid rgba(168,212,232,.07);right:-80px;top:-160px;pointer-events:none}
+.hero::after{content:'';position:absolute;width:560px;height:560px;border-radius:50%;border:1px solid rgba(168,212,232,.04);right:-170px;top:-250px;pointer-events:none}
+.bc{font-size:10.5px;color:rgba(255,255,255,.55);margin-bottom:.85rem;display:block;letter-spacing:.03em}
+.bc a{color:rgba(255,255,255,.4);text-decoration:none}
+.bc a:hover{color:rgba(255,255,255,.75)}
+.hero-badge{display:inline-block;background:var(--accent);color:var(--wh);font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:.75rem}
+.hero-tag{font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--s4);display:block;margin-bottom:.65rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(24px,4.5vw,38px);font-weight:900;color:var(--wh);line-height:1.15;margin-bottom:.65rem}
+.hero h1 em{font-style:italic;color:var(--s3)}
+.hero-sub{font-size:clamp(13px,2vw,15px);color:rgba(255,255,255,.78);max-width:520px;font-weight:400;line-height:1.65;margin-bottom:1.25rem}
+.hero-rule{height:1px;background:linear-gradient(90deg,rgba(200,216,228,.3),transparent)}
+.body{padding:2rem}
+.action-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem}
+.action-card{background:var(--wh);border:1px solid var(--br);border-radius:var(--r);padding:1.5rem;display:flex;flex-direction:column}
+.action-card.primary{border-top:3px solid var(--accent)}
+.action-card.secondary{border-top:3px solid var(--b6)}
+.ac-n{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:var(--s2);line-height:1;margin-bottom:.5rem;display:block}
+.ac-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--b8);margin-bottom:.45rem;line-height:1.25}
+.ac-text{font-size:13.5px;color:var(--t6);line-height:1.6;flex:1;margin-bottom:1rem}
+.attend-note{font-size:12.5px;color:var(--t4);font-style:italic;margin-top:.75rem;line-height:1.55}
+.btn-form{display:inline-block;background:var(--accent);color:var(--wh);font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:flex-start}
+.btn-form:hover{background:var(--accent-d)}
+.btn-nav{display:inline-block;background:var(--b8);color:var(--wh);font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:flex-start}
+.btn-nav:hover{background:var(--b7)}
+.btn-wa{display:inline-block;background:#25D366;color:var(--wh);font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:3px;text-decoration:none;white-space:nowrap;align-self:flex-start}
+.btn-wa:hover{background:#1EBE5A}
+.share-url-wrap{margin-top:.85rem}
+.share-url-label{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--t4);margin-bottom:.35rem;display:block}
+.share-url{background:var(--s1);border:1px solid var(--br);border-radius:3px;padding:.6rem .85rem;font-size:11px;color:var(--t6);line-height:1.5;word-break:break-all;cursor:text;user-select:all}
+.cta{background:var(--accent-l);border-top:1px solid #E8C4C0;border-bottom:1px solid #E8C4C0;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.cta-t{font-size:14px;color:var(--b8);line-height:1.5}
+.cta-t strong{font-weight:500}
+.btn-row{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);color:var(--wh);font-size:11.5px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:9px 20px;border-radius:3px;text-decoration:none;white-space:nowrap}
+.btn:hover{background:var(--accent-d)}
+.btn-ol{background:transparent;color:var(--b8);border:1.5px solid var(--b6)}
+.btn-ol:hover{background:var(--b05)}
+.footer{background:var(--b8);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem}
+.ft-l{font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.65}
+.ft-l strong{color:rgba(255,255,255,.82);font-weight:500}
+.ft-r{display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center}
+.ft-a{font-size:11.5px;color:var(--s3);text-decoration:none;opacity:.9}
+.ft-a:hover{opacity:1}
+.ft-detail{font-size:10.5px;color:rgba(255,255,255,.4);text-decoration:none;border-left:1px solid rgba(255,255,255,.15);padding-left:1.25rem}
+.ft-detail:hover{color:rgba(255,255,255,.7)}
+.disc{background:var(--b9);padding:.45rem 2rem;font-size:10px;color:rgba(255,255,255,.38);line-height:1.5}
+@media(max-width:640px){
+  .hero{padding:1.75rem 1.25rem 1.5rem}.body{padding:1.5rem 1.25rem}
+  .footer{padding:1rem 1.25rem}.cta{padding:1rem 1.25rem}.disc{padding:.45rem 1.25rem}
+  .action-grid{grid-template-columns:1fr}
+  .ft-detail{border-left:none;padding-left:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="wave-bar"></div>
+
+<div class="hero">
+  <span class="bc"><a href="index.html">The SGM</a> &nbsp;›&nbsp; How to Support</span>
+  <span class="hero-badge">Active Campaign</span>
+  <span class="hero-tag">How to Support &nbsp;·&nbsp; 1 May 2026</span>
+  <h1>Your voice matters.<br><em>Here is how to use it.</em></h1>
+  <p class="hero-sub">The committee is stalling. Here is what you can do about it. It takes two minutes.</p>
+  <div class="hero-rule"></div>
+</div>
+
+<div class="body">
+  <div class="action-grid">
+
+    <div class="action-card primary">
+      <span class="ac-n">01</span>
+      <div class="ac-title">Add your name</div>
+      <p class="ac-text">The formal petition has been submitted — and remains open. Active members who have not yet signed are encouraged to add their name. Every additional signature makes the committee's position harder to hold. Your details will not be shared without your consent.</p>
+      <a class="btn-form" href="https://docs.google.com/forms/d/1zh6lRsr6T0sRORowWqHJXhE5uYZnoIbMeOmH6Qpj7xc/viewform?hl=en" target="_blank">Add your name →</a>
+    </div>
+
+    <div class="action-card primary">
+      <span class="ac-n">02</span>
+      <div class="ac-title">Attend the SGM</div>
+      <p class="ac-text">Fifty members are required for a quorum. Your physical presence at the meeting is one of the most important things you can do. Register above — we will notify you the moment the date is confirmed.</p>
+      <p class="attend-note">Only acceptable: 23 May · Notice required by 9 May</p>
+    </div>
+
+    <div class="action-card secondary">
+      <span class="ac-n">03</span>
+      <div class="ac-title">Share this site</div>
+      <p class="ac-text">Many members — especially in the diaspora — are unaware of what has been happening. Share this site with members you know and trust.</p>
+      <a class="btn-wa" href="https://wa.me/?text=Have%20you%20seen%20this%3F%20The%20CSC%20SGM%20campaign%20%E2%80%94%2070%20members%20have%20petitioned%20for%20a%20Special%20General%20Meeting.%20Read%20more%20and%20add%20your%20voice%3A%20https%3A%2F%2Fcscbackmail-beep.github.io%2Fcsc-sgm%2Fsgm1%2F" target="_blank">Share on WhatsApp →</a>
+      <div class="share-url-wrap">
+        <span class="share-url-label">Or copy this link</span>
+        <div class="share-url">https://cscbackmail-beep.github.io/csc-sgm/sgm1/</div>
+      </div>
+    </div>
+
+    <div class="action-card secondary">
+      <span class="ac-n">04</span>
+      <div class="ac-title">Send an enquiry</div>
+      <p class="ac-text">Questions, concerns, or information relevant to the campaign — we would like to hear from you. All enquiries are handled in confidence.</p>
+      <a class="btn-nav" href="https://docs.google.com/forms/d/1zh6lRsr6T0sRORowWqHJXhE5uYZnoIbMeOmH6Qpj7xc/viewform?hl=en" target="_blank">Send a message →</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-t"><strong>Read the six resolutions.</strong><br>Understand what the SGM is being called to decide — and why each one matters.</div>
+  <div class="btn-row">
+    <a class="btn" href="resolutions.html">The Six Resolutions →</a>
+    <a class="btn btn-ol" href="index.html">Back to the SGM</a>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="ft-l">
+    <strong>Colombo Swimming Club</strong> · 148 Galle Road, Colombo 3, Sri Lanka<br>
+    A proposal by a group of members &nbsp;·&nbsp; Not an official club communication
+  </div>
+  <div class="ft-r">
+    <a class="ft-a" href="index.html">The SGM</a>
+    <a class="ft-a" href="petition.html">The Petition</a>
+    <a class="ft-a" href="resolutions.html">Resolutions</a>
+    <a class="ft-detail" href="../sgm2026/">Full detail →</a>
+  </div>
+</div>
+<div class="disc">This website represents the views of a group of Colombo Swimming Club members and is not an official communication of the club or its committee. Your details will not be shared without your consent. Last updated 1 May 2026.</div>
+
+</div>
+</body>
+</html>
